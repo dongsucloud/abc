@@ -1,0 +1,701 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.background {
+    background-color: #141517;
+    width: 100%;
+    height: 5000px;
+    padding: 0px 120px 90px 0;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'Bluetea';
+    src: url(../fonts/bluetea/Bluetea.ttf) format('truetype');
+}
+
+/* header */
+
+.hcontainer {
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    height: 100%;
+    width: 25%;
+    /* margin-left: 30px; */
+}
+
+.mviewimg {
+    width: 39px;
+    height: 28px;
+    background: url(../image/moreview.png)no-repeat center/cover;
+    display: block;
+    margin-bottom: 100px;
+    margin-left: 33.5px;
+    cursor: pointer;
+}
+
+.lview {
+    width: 5%;
+    margin-top: 90px;
+    height: 100%;
+    /* background-color: #141517; */
+    z-index: 12;
+}
+.rview {
+    width: 100%;
+    display: none;
+    padding-top: 155px;
+    background-color: rgba(20, 21, 23, 0.5);
+   z-index: 11;
+}
+
+.rview ul li {
+    width: 100%;
+    height: 81px;
+    margin-top: 50px;
+    display: flex;
+}
+.rview ul li h1 {
+    white-space: nowrap;
+    color: white;
+    font-weight: lighter;
+    display: block;
+    margin-left: 100px;
+}
+
+.rview ul li h1:hover {
+    text-shadow: 3px 3px 3px rgb(204, 175, 224);
+    cursor: pointer;
+}
+
+.rview ul li p:hover {
+    text-shadow: 3px 3px 3px rgb(204, 175, 224);
+    cursor: pointer;
+}
+
+.rview ul li p {
+    width: 100%;
+    height: 43px;
+    color: white;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 100px;
+    display: block;
+}
+
+.lview .more-view .mviewicon > ul > li:nth-child(1) > span {
+    width: 60px;
+    height: 60px;
+    background: url(../image/icon1.png)no-repeat center/cover;
+    display: inline-block;
+    margin-bottom: 55px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+.lview .more-view .mviewicon > ul > li:nth-child(2) > span {
+    width: 60px;
+    height: 60px;
+    background: url(../image/icon2.png)no-repeat center/cover;
+    display: inline-block;
+    margin-bottom: 55px;
+    margin-left: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.lview .more-view .mviewicon > ul > li:nth-child(3) > span {
+    width: 60px;
+    height: 60px;
+    background: url(../image/icon3.png)no-repeat center/cover;
+    display: inline-block;
+    margin-bottom: 55px;
+    margin-left: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.lview .more-view .mviewicon > ul > li:nth-child(4) > span {
+    width: 60px;
+    height: 60px;
+    background: url(../image/icon4.png)no-repeat center/cover;
+    display: inline-block;
+    margin-bottom: 55px;
+    margin-left: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.lview .more-view .mviewicon > ul > li:nth-child(5) > span {
+    width: 60px;
+    height: 60px;
+    background: url(../image/icon5.png)no-repeat center/cover;
+    display: inline-block;
+    margin-bottom: 55px;
+    margin-left: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* main */
+
+/* slide */
+/* 하단 바 만들기  */
+    .slidecontainer {
+        width: 100%;
+        height: 970px;
+        position: relative;
+        margin-left: 110px;
+        padding-top: 90px;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-pagination .swiper-pagination-bullet {
+        width: 37px;
+        height: 35px;
+        background: url(../image/star.png)no-repeat center/cover;
+    }
+
+    .bar {
+        width: 80%;
+        height: 25px;
+        position: absolute;
+        border: 1px solid black;
+        background-color: lightcoral;
+        border-radius: 10px;
+        position: relative;
+        z-index: 8;
+        top: -45px;
+        left: 180px;
+        animation: bar 8s infinite linear;
+    }
+    @keyframes bar {
+        from {width: 0;}
+        to {width: 80%;}
+    }
+    
+
+    .slidecontainer > p {
+        font-size: 25px;
+        color: black;
+        position: relative;
+        z-index: 8;
+        top: -110px;
+        left: 1600px;
+        animation: ns 16s infinite linear;
+        font-weight: bold;
+    }
+    @keyframes ns {
+        0% {top: -110px;}
+        46% {top: -110px; color: black;}
+        48% {top: -130px; color: yellow;}
+        50% {top: -110px; color: black;}
+        96% {top: -110px; color: black;}
+        98% {top: -130px; color: yellow;}
+        100% {top: -110px; color: black;}
+       
+        
+    }
+
+    /* clone cording */
+
+    .clonecording {
+        width: 100%;
+        height: 970px;
+        bottom: 0;
+    }
+    
+    .clonecording > .ch1 {
+        text-align: center;
+        font-family: 'Bluetea';
+        color: #BB002f;
+        text-shadow: 5px 5px 1px #BB002F;
+        font-size: 85px;
+        position: relative;
+        left: -100px;
+        top: 90px;
+        display: block;
+        z-index: 7;
+    }
+    .clonecording > .ch1::after {
+        content: 'Clone';
+        text-align: center;
+        font-family: 'Bluetea';
+        color: #EDA4B7;
+        font-size: 78px;
+        position: relative;
+        display: block;
+        left: -0px;
+        top: -105px;
+        z-index: 6;
+    }
+    .clonecording > .ch2 {
+        text-align: center;
+        font-family: 'Bluetea';
+        color: #BB002f;
+        text-shadow: 5px 5px 1px #BB002F;
+        font-size: 85px;
+        position: relative;
+        left: 180px;
+        top: -125px;
+        display: block;
+        z-index: 7;
+    }
+    .clonecording > .ch2::after {
+        content: 'Cording';
+        text-align: center;
+        font-family: 'Bluetea';
+        color: #EDA4B7;
+        font-size: 78px;
+        position: relative;
+        display: block;
+        left: 0px;
+        top: -105px;
+        z-index: 6;
+    }
+
+    .clonecording > .cp1 {
+        text-align: center;
+        color: #eee;
+        position: relative;
+        left: 80px;
+        top: -230px;
+        margin: 20px;
+        display: block;
+    }
+
+    .clonecording > .cp2 {
+        text-align: center;
+        color: #eee;
+        position: relative;
+        display: block;
+        left: 85px;
+        top: -380px;
+    }
+
+    #cloneitem {
+        position: relative;
+        width: 100%;
+        height: 80%;
+        
+    }
+
+     #test-tube {
+        position: absolute;
+        left: 53%;
+        bottom: 420px;
+        width: 70%; 
+        height: 500px; 
+        background-color: #718760;
+        border-radius: 20px;
+        transform: translateX(-50%);
+    }
+
+    #canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* typo */
+    .typocontainer {
+        width: 100%;
+        height: 970px;
+        position: relative;
+        
+    }
+
+    .htypo {
+        text-align: center;
+        width: 100%;
+        height: 400px;
+    }
+
+    .kinetictypo {
+        width: 449px;
+        height: 102px;
+        background: url(../image/kinetictypo.png)no-repeat center/cover;
+        display: inline-block;
+        position: relative;
+        top: 140px;
+        left: 70px;
+    }
+
+    .tp {
+        color: white;
+        position: relative;
+        top: 160px;
+        left: 70px;
+    }
+
+    .typoitem {
+        display: flex;
+        width: 100%;
+        height: 400px;
+    }
+
+    .ltypo {
+        width: 70%;
+        height: 800px;
+        padding-left: 200px;
+    }
+
+
+    .rtypo {
+        width: 30%;
+        height: 800px;
+        position: relative;
+    }
+
+    .rtypo ul li:nth-child(1) {
+        position: absolute;
+        width: 409px;
+        height: 383px;
+        background: url(../image/frykirby.png)no-repeat center/cover;
+        top: 0px;
+        left: 0px;
+        z-index: 3;
+    }
+    .rtypo ul li:nth-child(2) {
+        position: absolute;
+        width: 133px;
+        height: 74px;
+        background: url(../image/frykirbyleftfoot.png)no-repeat center/cover;
+        z-index: 2;
+        top: 335px;
+        left: 70px;
+        animation: lf 0.8s infinite linear;
+    }
+    @keyframes lf {
+        0% {rotate: 0;}
+        25% {rotate: 15deg;}
+        50% {rotate: 0;}
+        75% {rotate: 15deg;}
+        100% {rotate: 0;}   
+    }
+    .rtypo ul li:nth-child(3) {
+        position: absolute;
+        background: url(../image/frykirbyrightfoot.png)no-repeat center/cover;
+        width: 158px;
+        height: 167px;
+        z-index: 2;
+        top: 250px;
+        left: 225px;
+        animation: rf 0.8s infinite linear;
+    }
+    @keyframes rf {
+        0% {rotate: 0;}
+        25% {rotate: 15deg;}
+        50% {rotate: 0;}
+        75% {rotate: 15deg;}
+        100% {rotate: 0deg;}   
+    }
+    .rtypo ul li:nth-child(4) {
+        position: absolute;
+        background: url(../image/frykirbylefthand.png)no-repeat center/cover;
+        width: 99px;
+        height: 96px;
+        z-index: 2;
+        top: 20px;
+        left: 28px;
+        animation: lh 0.8s infinite linear;
+    }
+    @keyframes lh {
+        0% {rotate: 0;}
+        25% {rotate: -27deg;}
+        50% {rotate: 0;}
+        75% {rotate: -27deg;}
+        100% {rotate: 0;}
+    }
+    .rtypo ul li:nth-child(5) {
+        position: absolute;
+        background: url(../image/frykirbyrighthand.png)no-repeat center/cover;
+        width: 127px;
+        height: 127px;
+        z-index: 4;
+        top: -10px;
+        left: 250px;
+        animation: rh 0.8s infinite linear;
+    }
+    @keyframes rh {
+        0% {rotate: 0;}
+        25% {rotate: -15deg;}
+        50% {rotate: 0;}
+        75% {rotate: -15deg;}
+        100% {rotate: 0deg;}
+    }
+
+
+    /* Live 2D */
+    
+    .livecontainer {
+        display: flex;
+        width: 100%;
+        height: 970px;
+    }
+
+    .llive {
+        width: 30%;
+        height: 100%;
+        position: relative;
+    }
+
+    .rlive {
+        width: 70%;
+        height: 100%;
+        position: relative;
+        margin-top: 50px;
+    }
+
+    .live2ditem {
+        padding-top: 480px;
+        padding-left: 200px;
+    }
+
+    .llive ul li:nth-child(1) {
+        width: 315px;
+        height: 339px;
+        background: url(../image/absorbkirby.png)no-repeat center/cover;
+        position: absolute;
+        top: 500px;
+        left: 200px;
+        z-index: 4;
+        animation: asb 0.25s infinite linear;
+    }
+    @keyframes asb {
+       0% {top: 500px;}
+       50% {top: 510px;}
+       100% {top: 500px;}
+        
+    }
+
+    .llive ul li:nth-child(2) {
+        width: 94px;
+        height: 106px;
+        background: url(../image/absorbkirbylefthand.png)no-repeat center/cover;
+        position: absolute;
+        top: 520px;
+        left: 170px;
+        z-index: 3;
+        animation: aslh 0.25s infinite linear;
+    }
+        @keyframes aslh {
+            0% {top: 520px;}
+            50% {top: 530px;}
+            100% {top: 520px;}
+        }
+    .llive ul li:nth-child(3) {
+        width: 70px;
+        height: 32px;
+        background: url(../image/absorbkirbyrighthand.png)no-repeat center/cover;
+        position: absolute;
+        top: 502px;
+        left: 400px;
+        z-index: 3;
+        animation: asrh 0.25s infinite linear;
+    }
+    @keyframes asrh {
+        0% {top: 502px;}
+        50% {top: 512px;}
+        100% {top: 502px;}
+    }
+
+    .live2d {
+        background: url(../image/live2d.png)no-repeat center/cover;
+        width: 304px;
+        height: 84px;
+        position: absolute;
+        right: 100px;
+        bottom: 560px;
+    }
+
+    .rlive > p {
+        color: white;
+        position: absolute;
+        right: 100px;
+        bottom: 160px;
+    }
+
+    /* vidio editing */
+    
+    .vidiocontainer {
+        width: 100%;
+        height: 970px;
+        position: relative;
+    }
+
+    .directorkirby {
+        background: url(../image/directorkirby.png)no-repeat center/cover;
+        width: 177px;
+        height: 150px;
+        position: absolute;
+        top: 220px;
+        left: 300px;
+    }
+
+    .slate1 {
+        background: url(../image/slatebottom.png)no-repeat center/cover;
+        width: 107px;
+        height: 74px;
+        position: absolute;
+        top: 210px;
+        left: 460px;
+    }
+
+    .slate2 {
+        background: url(../image/slatetop.png)no-repeat center/cover;
+        width: 78px;
+        height: 69px;
+        position: absolute;
+        top: 165px;
+        left: 460px;
+        animation: sl 1s infinite linear;
+    }
+    @keyframes sl {
+        0% {top: 165px; rotate: 0deg;}
+        50% {top: 190px; rotate: 15deg;}
+        100% {top: 165px; rotate: 0deg;}
+    }
+
+    .vidiocontainer > ul > li:nth-child(1) {
+        background: url(../image/projector.png)no-repeat center/cover;
+        width: 132px;
+        height: 173px;
+        position: absolute;
+        top: 220px;
+        right: 175px;
+        z-index: 6;
+    }
+
+    .vidiocontainer > ul > li:nth-child(2) {
+        background: url(../image/projectortopleft.png)no-repeat center/cover;
+        width: 55px;
+        height: 54px;
+        position: absolute;
+        top: 165px;
+        right: 265px;
+        animation: ptl 2s infinite linear;
+        z-index: 6;
+    }
+
+    @keyframes ptl {
+        0% {rotate: 0deg;}
+        100% {rotate: 360deg;}
+    }
+    
+    .vidiocontainer > ul > li:nth-child(3) {
+        background: url(../image/projectortopright.png)no-repeat center/cover;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 160px;
+        right: 200px;
+        animation: ptr 3s infinite linear;
+        z-index: 6;
+    }
+    @keyframes ptr {
+        0% {rotate: 0deg;}
+        100% {rotate: 360deg;}
+    }
+    
+    .vidiocontainer > ul > li:nth-child(4) {
+        background: url(../image/projectorlight.png)no-repeat center/cover;
+        width: 292px;
+        height: 296px;
+        position: absolute;
+        top: 95px;
+        right: -120px;
+        z-index: 6;
+        animation: fl 4s infinite linear;
+        opacity: 1;
+    }
+
+    @keyframes fl {
+        0% {opacity: 1;}
+        25% {opacity: 0;}
+        50% {opacity: 1;}
+        75% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    
+    .vidiocontainer > ul > li:nth-child(5) {
+        background: url(../image/flimback.png)no-repeat center/cover;
+        width: 535px;
+        height: 230px;
+        position: absolute;
+        right: -130px;
+        top: 220px;
+        z-index: 7;
+       
+    }
+
+
+    .film {
+        background: url(../image/flimfront.png);
+        width:100%;
+        height: 334px;
+        position: absolute;
+        bottom: 200px;
+        right: -110px;
+    }
+
+    .vidioitem {
+        position: absolute;
+        width: 100%;
+        height: 271px;
+        bottom: 200px;
+        left: 450px;
+    }
+
+    .vidioediting {
+        background: url(../image/vidioediting.png)no-repeat center/cover;
+        width: 505px;
+        height: 113px;
+        position: absolute;
+        left: 40%;
+        bottom: 80px;
+    }
+
+    .vidiocontainer > p {
+        color: #fff;
+        position: absolute;
+        left: 41%;
+        bottom: 50px;
+    }
+
+    /* gotop */
+
+    .gotop {
+        width: 82px;
+        height: 125px;
+        background: url(../image/go-top.png)no-repeat center/cover;
+        position: fixed;
+        right: 80px;
+        bottom: 50px;
+        z-index: 10;
+    }
